@@ -8,7 +8,9 @@
 
 #import "MJGetCoinsAnimationView.h"
 
-@interface MJGetCoinsAnimationView ()
+#define AnimationKey @"AnimationKey"
+
+@interface MJGetCoinsAnimationView () <CAAnimationDelegate>
 @property (nonatomic, strong) NSMutableDictionary *dictAnimation;///< 进行中的动画 key:animation value:view
 @end
 
@@ -36,13 +38,14 @@
 - (void)viewConfig
 {
     self.backgroundColor = [UIColor clearColor];
+    self.userInteractionEnabled = NO;
     
     _dictAnimation = [[NSMutableDictionary alloc] init];
     
-    _coins = 25;                // 金币个数
-    _duration = 1.0;            // 动画时长
+    _coins = 20;                // 金币个数
+    _duration = 1.5;            // 动画时长
     _coinSize = CGSizeZero;     // 金币大小
-    _initialSize = CGSizeMake(100, 50);// 金币初始位置范围
+    _initialSize = CGSizeMake(80, 40);// 金币初始位置范围
 }
 
 #pragma mark - Set & Get
@@ -82,15 +85,20 @@
         //移动路径
         animation.path = coinPath.CGPath;
         
-        NSInteger times = floor(_duration / 2.0 * 10);
-        animation.duration = (arc4random() % times) / 10 + _duration / 2.0;
+        NSInteger times = floor(_duration / 2.0 * 100.0);
+        NSTimeInterval duration = (arc4random() % times + 1) / 100.0 + _duration / 2.0;
+        animation.duration = duration;
         animation.repeatCount = 1;
         animation.calculationMode = kCAAnimationCubic;
         animation.rotationMode = kCAAnimationRotateAuto;
+        animation.removedOnCompletion = NO;
+        animation.fillMode = kCAFillModeForwards;
         animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
         animation.delegate = self;
-        
-        [_dictAnimation setObject:imgView forKey:animation];
+    
+        NSString *value = [NSString stringWithFormat:@"%p", animation];
+        [_dictAnimation setObject:imgView forKey:value];
+        [animation setValue:value forKey:AnimationKey];
         [imgView.layer addAnimation:animation forKey:nil];
     }
 }
@@ -107,7 +115,7 @@
     if (xRange && yRange) {
         CGFloat xOffset = arc4random() % xRange + 1 - sizeRange.width / 2.0;
         CGFloat yOffset = arc4random() % yRange + 1 - sizeRange.height / 2.0;
-        point = CGPointMake(center.x + xOffset, center.y + yOffset)
+        point = CGPointMake(center.x + xOffset, center.y + yOffset);
     }
 
     return point;
@@ -121,8 +129,8 @@
     [coinPath moveToPoint:point];
     
     // 控制点
-    CGFloat xOffset = (point.x - fromPoint.x) * 1.0;
-    CGFloat yOffset = (fromPoint.y - toPoint.y) * 0.1;
+    CGFloat xOffset = (point.x - fromPoint.x) * 3.0;
+    CGFloat yOffset = (fromPoint.y - toPoint.y) * 0.2;
     CGPoint controlPoint = CGPointMake(point.x + xOffset, point.y - yOffset);
     
     [coinPath addQuadCurveToPoint:toPoint controlPoint:controlPoint];
@@ -133,10 +141,12 @@
 #pragma mark - Delegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-    UIView *view = _dictAnimation[anim];
-    [_dictAnimation removeObjectForKey:anim];
-    [view removeFromSuperview];
+    NSString *value = [anim valueForKey:AnimationKey];
     
+    UIView *view = _dictAnimation[value];
+    [_dictAnimation removeObjectForKey:value];
+    [view removeFromSuperview];
+
     if (_dictAnimation.count == 0) {
         [self removeFromSuperview];
     }

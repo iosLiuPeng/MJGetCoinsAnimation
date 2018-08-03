@@ -24,7 +24,13 @@
 }
 
 - (IBAction)clickedbtn:(id)sender {
+    MJGetCoinsAnimationView *view = [[MJGetCoinsAnimationView alloc] initWithFrame:self.view.bounds];
+    view.imgCoin = [UIImage imageNamed:@"coin"];
     
+    [self.view addSubview:view];
+    
+    UIView *img = arc4random() % 2? _img1: _img2;
+    [view startAnimationFrom:_btn.center to:img.center];
 }
 
 @end

@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4m-K2-oFL">
-                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="418.5" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="clickedbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bFt-au-ao1"/>
@@ -39,7 +39,7 @@
                             <constraint firstItem="j4m-K2-oFL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KJJ-rZ-Qu1"/>
                             <constraint firstItem="gJ3-5O-ooa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Od2-ct-qyb"/>
                             <constraint firstItem="9Ac-Ot-ZbB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.8" id="Wqk-IF-FEc"/>
-                            <constraint firstItem="j4m-K2-oFL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bRC-44-HfT"/>
+                            <constraint firstItem="j4m-K2-oFL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.3" id="bRC-44-HfT"/>
                             <constraint firstItem="9Ac-Ot-ZbB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.15" id="dIW-F1-K2r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
