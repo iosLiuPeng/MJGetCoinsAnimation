@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *btn;
+@property (strong, nonatomic) IBOutlet UIImageView *img1;
+@property (strong, nonatomic) IBOutlet UIImageView *img2;
 
 @end
 
@@ -19,11 +22,6 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
