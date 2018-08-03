@@ -11,44 +11,43 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fp4-hi-bhj">
-                                <rect key="frame" x="164" y="318.5" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4m-K2-oFL">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pf4-N6-U38"/>
-                                    <action selector="sss:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dI5-GR-07O"/>
+                                    <action selector="clickedbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bFt-au-ao1"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="tnb-F1-s6a">
-                                <rect key="frame" x="166.5" y="46" width="42" height="41"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="gJ3-5O-ooa">
+                                <rect key="frame" x="166.5" y="79.5" width="42" height="41"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="YDU-IM-Sad">
-                                <rect key="frame" x="316.5" y="13" width="42" height="41"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="9Ac-Ot-ZbB">
+                                <rect key="frame" x="316.5" y="29.5" width="42" height="41"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YDU-IM-Sad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.8" id="9jx-51-B55"/>
-                            <constraint firstItem="tnb-F1-s6a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DqR-ig-PaR"/>
-                            <constraint firstItem="tnb-F1-s6a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.2" id="gMf-NR-xRQ"/>
-                            <constraint firstItem="Fp4-hi-bhj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kSX-ue-kvo"/>
-                            <constraint firstItem="YDU-IM-Sad" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.1" id="pJo-hg-qXm"/>
-                            <constraint firstItem="Fp4-hi-bhj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xOh-Zc-XCg"/>
+                            <constraint firstItem="gJ3-5O-ooa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.3" id="7S4-Z7-5mO"/>
+                            <constraint firstItem="j4m-K2-oFL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KJJ-rZ-Qu1"/>
+                            <constraint firstItem="gJ3-5O-ooa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Od2-ct-qyb"/>
+                            <constraint firstItem="9Ac-Ot-ZbB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.8" id="Wqk-IF-FEc"/>
+                            <constraint firstItem="j4m-K2-oFL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bRC-44-HfT"/>
+                            <constraint firstItem="9Ac-Ot-ZbB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.15" id="dIW-F1-K2r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btn" destination="Fp4-hi-bhj" id="726-Y8-VJa"/>
-                        <outlet property="img1" destination="tnb-F1-s6a" id="H4b-Z0-Ya5"/>
-                        <outlet property="img2" destination="YDU-IM-Sad" id="gRD-c8-cvT"/>
+                        <outlet property="btn" destination="j4m-K2-oFL" id="gCI-FY-Fko"/>
+                        <outlet property="img1" destination="gJ3-5O-ooa" id="Ddf-4d-w2a"/>
+                        <outlet property="img2" destination="9Ac-Ot-ZbB" id="g5k-K2-pPA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

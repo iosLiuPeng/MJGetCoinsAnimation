@@ -1,27 +1,30 @@
 //
-//  ViewController.m
+//  MainViewController.m
 //  MJGetCoinsAnimation
 //
-//  Created by 刘鹏i on 2018/8/1.
+//  Created by 刘鹏i on 2018/8/3.
 //  Copyright © 2018年 wuhan.musjoy. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
+#import "MJGetCoinsAnimationView.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *btn;
 @property (strong, nonatomic) IBOutlet UIImageView *img1;
 @property (strong, nonatomic) IBOutlet UIImageView *img2;
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
 
-
+- (IBAction)clickedbtn:(id)sender {
+    
+}
 
 @end

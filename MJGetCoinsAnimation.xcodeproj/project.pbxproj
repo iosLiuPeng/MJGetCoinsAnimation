@@ -13,7 +13,7 @@
 		462141C82111BFB30094841C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462141C62111BFB30094841C /* LaunchScreen.storyboard */; };
 		462141CB2111BFB30094841C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 462141CA2111BFB30094841C /* main.m */; };
 		462141D52112A6AE0094841C /* MJGetCoinsAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 462141D42112A6AE0094841C /* MJGetCoinsAnimationView.m */; };
-		462141D82113EF230094841C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462141D72113EF230094841C /* ViewController.m */; };
+		46342F242113F70E002FB457 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46342F232113F70E002FB457 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		462141CA2111BFB30094841C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		462141D32112A6AE0094841C /* MJGetCoinsAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJGetCoinsAnimationView.h; sourceTree = "<group>"; };
 		462141D42112A6AE0094841C /* MJGetCoinsAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJGetCoinsAnimationView.m; sourceTree = "<group>"; };
-		462141D62113EF230094841C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		462141D72113EF230094841C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		46342F222113F70E002FB457 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		46342F232113F70E002FB457 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +65,8 @@
 				462141D22111C02D0094841C /* Classes */,
 				462141BB2111BFB20094841C /* AppDelegate.h */,
 				462141BC2111BFB20094841C /* AppDelegate.m */,
-				462141D62113EF230094841C /* ViewController.h */,
-				462141D72113EF230094841C /* ViewController.m */,
+				46342F222113F70E002FB457 /* MainViewController.h */,
+				46342F232113F70E002FB457 /* MainViewController.m */,
 				462141C12111BFB20094841C /* Main.storyboard */,
 				462141C42111BFB30094841C /* Assets.xcassets */,
 				462141C62111BFB30094841C /* LaunchScreen.storyboard */,
@@ -164,8 +164,8 @@
 			files = (
 				462141CB2111BFB30094841C /* main.m in Sources */,
 				462141D52112A6AE0094841C /* MJGetCoinsAnimationView.m in Sources */,
-				462141D82113EF230094841C /* ViewController.m in Sources */,
 				462141BD2111BFB20094841C /* AppDelegate.m in Sources */,
+				46342F242113F70E002FB457 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
