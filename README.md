@@ -1,4 +1,4 @@
-# MJWaveView
+# MJGetCoinsAnimation
 
 金币入袋动画
 
